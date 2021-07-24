@@ -14,27 +14,29 @@
 
 <body>
     <h1>URL Shortener</h1>
+    <div class="err">
+        <% if (locals.error) { %>
+            <p class="error">
+                <%= error %>
+            </p>
+            <% } %>
+    </div>
 
-    <% if (locals.error) { %>
-        <p class="error">
-            <%= erorr %>
-        </p>
-        <% } %>
-
-            <div class="container">
-                <form action="/" method="POST">
-                    <input type="url" name="url" id="url" placeholder="Enter your URL"><br>
-                    <input type="submit" value="create url" id="submit">
-                </form>
-
-                <div class="shorturl">
-                    <% if (locals.short_url) { %>
-                        <a href="<%= short_url %>">
-                            <%= short_url %>
-                        </a>
-                        <% } %>
-                </div>
-            </div>
+    <div class="container">
+        <form action="/" method="POST">
+            <input type="url" name="url" id="url" placeholder="Enter your URL"><br>
+            <input type="submit" value="create url" id="submit">
+            <button type="reset" id="submit">Reset</button>
+        </form>
+        <br>
+    </div>
+    <div class="shorturl">
+        <% if (locals.short_url) { %>
+            <a href="<%= short_url %>" target="_blank">
+                <%= short_url %>
+            </a>
+            <% } %>
+    </div>
 </body>
 
 </html>

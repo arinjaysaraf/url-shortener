@@ -53,3 +53,18 @@ h1 {
     box-shadow: 4px 5px rgb(80, 77, 77);
     outline: none;
 }
+
+.shorturl {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    color: black;
+}
+
+.err {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+    color: red;
+    font-weight: bold;
+}
