@@ -15,7 +15,9 @@ git clone https://github.com/arinjaysaraf/url-shortener
   ```bash
 npm init
 ```
-3. Run at localhost
+3. Install & Run MongoDB
+
+4. Run at localhost
 ```bash
 node app.js
 ```
